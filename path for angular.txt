@@ -1,0 +1,2 @@
+C:\Users\679960\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\GitHub;C:\Users\679960\AppData\Roaming\npm;C:\Program Files (x86)\Git\bin
+C:\Users\dell\AppData\Local\GitHub\PortableGit_8810fd5c2c79c73adcc73fd0825f3b32fdb816e7\libexec\git-core;C:\Program Files (x86)\Microsoft SDKs\TypeScript\2.9

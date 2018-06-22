@@ -1,0 +1,44 @@
+import { Component, OnInit } from '@angular/core';
+
+@Component({
+  selector: 'app-switch',
+  template: `
+  <div class="tabs-selection">
+  <app-tab [active]="isSelected(1)" (click)="setTab(1)">Tab 1</app-tab>
+  <app-tab [active]="isSelected(2)" (click)="setTab(2)">Tab 2</app-tab>
+  <app-tab [active]="isSelected(3)" (click)="setTab(3)">Tab 3</app-tab>
+  </div>
+  <div [ngSwitch]="tab">
+  <app-tab-content *ngSwitchCase="1">Tab content 1</app-tab-content>
+  <app-tab-content *ngSwitchCase="2">Tab content 2</app-tab-content>
+  <app-tab-content *ngSwitchCase="3"></app-tab-content>
+  </div>
+  `
+  styleUrls: ['./switch.component.css']
+})
+export class SwitchComponent implements OnInit {
+	tab: number = 0;
+	value = 5;
+	setTab(num: number){
+		this.tab = num;
+	}
+
+	isSelected(num: number){
+		return this.tab === num;
+	}
+  constructor() { }
+
+  ngOnInit() {
+  }
+
+}
+
+
+
+<div {[ngSwitch]} = "value" type="text" name="uname">
+	<p *ngSwitchCase = "1">Hi</p>
+	<p *ngSwitchCase = "2">Hello </p>
+	<p *ngSwitchCase = "3">World </p>
+	<p *ngSwitchCase = "4">Cognizant </p>
+	<p *ngSwitchCase = "5">Technologies </p>
+	<p *ngSwitchDefault>Default</p>
